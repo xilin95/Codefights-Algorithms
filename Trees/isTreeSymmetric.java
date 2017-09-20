@@ -16,12 +16,12 @@ boolean isTreeSymmetric(Tree<Integer> t) {
     return isTreeSymmetricHelper(t.left, t.right);
 }
 
-boolean isTreeSymmetricHelper(Tree<Integer> left, Tree<Integer> right) {    
+boolean isTreeSymmetricHelper(Tree<Integer> left, Tree<Integer> right) {
     if(left == null && right == null) {
         return true;
     } else if(left == null || right == null) {
         return false;
-    } else if (left.value != right.value) {
+    } else if (!left.value.equals(right.value)) {
         return false;
     }
 
